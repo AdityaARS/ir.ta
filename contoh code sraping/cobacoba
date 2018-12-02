@@ -1,0 +1,29 @@
+import scrapy
+import re
+
+class cobascrapy(scrapy.Spider):
+	name = 'cobacoba'
+	start_urls = ['https://www.komikindo.tv/daftar-manga/']
+	f = open('link.txt', 'w')
+  
+  
+  
+  def parse(self, response):
+		for href in response.css('div.luf a::attr(href)'): //idk
+			url = href.extract()
+			f = open('link.txt', 'a')
+			f.write('https://www.komikindo.tv/' + url + '\n\n') //idk2
+			#yield{'url': url}
+			yield response.follow(url, self.(*****)) //ke metode pengambilan data
+
+
+		"""for href in response.css('div.clr span.inline-block a::attr(href)'):
+			url = href.extract()
+			yield scrapy.Request(url, self.parse)"""
+      
+      
+      
+      //DATA
+      <div class="luf"> <a title="-SINS-" class="series" href="https://www.komikindo.tv/manga/sins/">
+      <h3>-SINS-</h3> </a> <span class="ath">Miura, Masataka (Story &amp; Art)</span> 
+      <span class="gee"><a href="https://www.komikindo.tv/genres/shounen/" rel="tag">Shounen</a></span></div>
