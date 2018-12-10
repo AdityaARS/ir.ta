@@ -1,0 +1,4 @@
+rencana : 
+	- nginstall linux ( on windows / dual boot) 
+	- scraping
+	- ????
