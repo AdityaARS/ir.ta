@@ -2,3 +2,6 @@ rencana :
 	- nginstall linux ( on windows / dual boot) 
 	- scraping
 	- ????
+	
+	
+	nb : Luthfan install linux ubuntu on windows gk bisa, rencana dual boot
